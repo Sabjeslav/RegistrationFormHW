@@ -4,30 +4,63 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Form test</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Form Task</title>
   </head>
   <body>
     <section class="registration">
       <div class="form">
         <div class="header">
-          <div class="title"><span>Register</span></div>
+          <div class="title">
+            Register 
+          </div>
           <div class="subtitle">
             Create your account. It's free and only takes a minute
           </div>
         </div>
         <form class="registration-form" action="">
-          <input placeholder="First Name" class="input-field" type="text" />
-          <input placeholder="Last Name" class="input-field" type="text" />
-          <input placeholder="Email" class="input-field wide" type="text" />
-          <input placeholder="Password" class="input-field wide" type="text" />
-          <input placeholder="Confirm Password" class="input-field wide" type="text" />
-          <input type="checkbox"> 
-          <div class="terms">I accept the <a class="terms-link" href="#">Terms of Use</a> & <a class="terms-link" href="#">Privacy Policy</a> </div>
-          <input class="submit-btn" type="submit" value="Register Now">
+          <input
+            placeholder="First Name *"
+            class="input-field"
+            type="text"
+            required
+          />
+          <input
+            placeholder="Last Name *"
+            class="input-field"
+            type="text"
+            required
+          />
+          <input
+            placeholder="Email *"
+            class="input-field wide"
+            type="text"
+            required
+          />
+          <input
+            placeholder="Password *"
+            class="input-field wide"
+            type="password"
+            required
+          />
+          <input
+            placeholder="Confirm Password *"
+            class="input-field wide"
+            type="password"
+            required
+          />
+          
+          <div class="terms">
+            <input type="checkbox" class="terms-checkbox" required />
+            I accept the <a class="terms-link" href="#">Terms of Use</a> &
+            <a class="terms-link" href="#">Privacy Policy</a>
+          </div>
+          <div class="form-caption">
+            * - required fields
+          </div>
+          <input class="submit-btn" type="submit" value="Register Now" />
         </form>
-
       </div>
     </section>
   </body>

@@ -14,6 +14,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   min-height: 100vh;
+  padding: 10px;
   background: url("https://free4kwallpapers.com/uploads/originals/2020/01/15/abstract-k--wallpaper.jpg") center center/cover no-repeat;
 }
 
@@ -31,7 +32,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 auto;
   border-radius: 10px;
   max-width: 500px;
   padding: 20px;
@@ -47,23 +47,18 @@ body {
   font-size: 25px;
 }
 
-.registration .header .title span {
-  z-index: 10;
-}
-
-.registration .header .title::before {
+.registration .header .title::before, .registration .header .title::after {
   content: '';
-  display: block;
-  width: 100%;
+  display: inline-block;
+  width: 35%;
   background-color: #a7a7a7;
   height: 2px;
   position: relative;
-  top: 15px;
-  z-index: 1;
+  bottom: 0.3em;
 }
 
 .registration .header .subtitle {
-  color: #a8a8a8;
+  color: #a8a8aa;
   font-size: 15px;
   margin-top: 15px;
 }
@@ -84,10 +79,17 @@ body {
 
 .registration-form .input-field {
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 6px;
+  width: auto;
   outline: none;
   border: 1px solid #b9b9b9;
   margin: 10px 0;
+}
+
+.registration-form .input-field:focus {
+  border: 1px solid #0380f4;
+  -webkit-box-shadow: 0px 0px 2px 3px rgba(45, 178, 240, 0.4);
+          box-shadow: 0px 0px 2px 3px rgba(45, 178, 240, 0.4);
 }
 
 .registration-form .wide {
@@ -98,8 +100,9 @@ body {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  margin-left: 10px;
   color: #a8a8aa;
+  font-size: 15px;
+  display: inline-block;
 }
 
 .registration-form .terms-link {
@@ -112,18 +115,48 @@ body {
   text-decoration: underline;
 }
 
+.registration-form .terms-checkbox {
+  vertical-align: middle;
+}
+
+.registration-form .form-caption {
+  color: #8f8f8f;
+  font-size: 12px;
+}
+
 .registration-form .submit-btn {
   width: 100%;
   background-color: #54ac55;
-  color: white;
+  color: #fff;
   font-weight: 600;
   outline: none;
   border: none;
   border-radius: 5px;
   padding: 10px 30px;
   margin-top: 15px;
+  -webkit-transition: .2s all;
+  transition: .2s all;
 }
 
 .registration-form .submit-btn:hover {
   background-color: #3d883e;
+}
+
+@media (max-width: 575px) {
+  .registration .header .title {
+    font-size: 20px;
+  }
+  .registration .header .title::before, .registration .header .title::after {
+    width: 30%;
+  }
+  .registration-form .input-field {
+    width: 100%;
+  }
+  .registration .form-caption {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .registration .terms, .registration .form-caption {
+    text-align: center;
+  }
 }

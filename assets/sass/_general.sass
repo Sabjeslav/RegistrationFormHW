@@ -3,13 +3,13 @@ body
   justify-content: center
   align-items: center
   min-height: 100vh
+  padding: 10px
   background: url('https://free4kwallpapers.com/uploads/originals/2020/01/15/abstract-k--wallpaper.jpg') center center/cover no-repeat
 .registration
   display: flex
   flex-direction: column
   justify-content: center
   align-items: center
-  margin: 0 auto
   border-radius: 10px
   max-width: 500px
   padding: 20px
@@ -19,19 +19,16 @@ body
     text-align: center
     .title
       font-size: 25px
-      span
-        z-index: 10
-      &::before
+      &::before, &::after
         content: ''
-        display: block
-        width: 100%
+        display: inline-block
+        width: 35%
         background-color: #a7a7a7
         height: 2px
         position: relative
-        top: 15px
-        z-index: 1
+        bottom: 0.3em
     .subtitle
-      color: #a8a8a8
+      color: $text-color
       font-size: 15px
       margin-top: 15px
   &-form
@@ -41,31 +38,42 @@ body
     margin-top: 20px
     .input-field
       padding: 10px
-      border-radius: 5px
+      border-radius: 6px
+      width: auto
       outline: none
       border: 1px solid #b9b9b9
       margin: 10px 0
+      &:focus
+        border: 1px solid #0380f4
+        box-shadow: 0px 0px 2px 3px rgba(45, 178, 240, 0.4);
     .wide
       width: 100%
     .terms
       flex-grow: 1
-      margin-left: 10px
-      color: #a8a8aa
+      color: $text-color
+      font-size: 15px
+      display: inline-block
       &-link
         color: #4f9556
         text-decoration: none
         outline: none
         &:hover
           text-decoration: underline
+      &-checkbox
+        vertical-align: middle
+    .form-caption
+      color: #8f8f8f
+      font-size: 12px  
     .submit-btn
       width: 100%
       background-color: #54ac55
-      color: white
+      color: #fff
       font-weight: 600
       outline: none
       border: none
       border-radius: 5px
       padding: 10px 30px
       margin-top: 15px
+      transition: .2s all
       &:hover
         background-color: #3d883e
