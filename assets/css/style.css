@@ -117,6 +117,7 @@
 
 .registration-form .terms-checkbox {
   vertical-align: middle;
+  background-color: red;
 }
 
 .registration-form .form-caption {
@@ -158,5 +159,19 @@
   }
   .registration .terms, .registration .form-caption {
     text-align: center;
+  }
+}
+
+@media print {
+  .registration {
+    border: 1px solid #000;
+  }
+  .registration-form .terms-link {
+    color: #000;
+    text-decoration: underline;
+  }
+  .registration-form .submit-btn {
+    border: 1px solid #000;
+    color: #000;
   }
 }
